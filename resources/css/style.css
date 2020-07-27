@@ -304,10 +304,11 @@ h2 {
 }
 
 /* Fixing background for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     .my-services,
-    .my-work {
+    .my-work,
+    .intro-background {
         background-attachment: scroll;
     }
 
@@ -395,7 +396,7 @@ h2 {
     background-image: url(../img/project-5.jpg);
     background-size: cover;
     background-blend-mode: multiply;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-position: center;
 }
 
@@ -658,6 +659,6 @@ REGULAR NAV
     background-image: url(../img/project-1.jpg);
     background-size: cover;
     background-blend-mode: multiply;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 
 }
