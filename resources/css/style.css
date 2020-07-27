@@ -1,0 +1,657 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Roboto', monospace;
+    --ff-third: 'Rubik', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 500;
+
+    --clr-white: #fff;
+    --clr-light: #eeeeee;
+    --clr-dark: #303030;
+    --clr-accent: #778899;
+    /* #618bad; 
+    this ones good : #344152;*/
+    --clr-background: #42647F;
+
+    --fs-h1: 4rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
+    --bs: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 5.5rem;
+        --fs-h2: 4.25rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.50rem;
+    }
+}
+
+body {
+    background-color: #344152;
+    /* background: linear-gradient(var(--clr-light), #242424 35%, var(--clr-light) 35%); */
+    margin: 0;
+    font-family: "Rubik";
+    color: var(--clr-light);
+    font-size: var(--fs-body);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+section {
+    padding: 4em 4em;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+a:active {
+    outline: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 1.5em;
+}
+
+
+strong {
+    font-weight: var(--fw-bold);
+}
+
+:focus {
+    outline: 2px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+.project__item:focus {
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 0.2em;
+    line-height: 2em;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.0;
+    margin: 0;
+    color: var(--clr-light);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: 400;
+}
+
+/* h3 {
+    margin-bottom: 0.2em;
+} */
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+    margin-top: 0.5em;
+
+}
+
+.section__title--intro strong {
+    display: block;
+    /* letter-spacing: .01em; */
+    line-height: 1.2em;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+    border-radius: 0.3em;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+    padding: .25em 1em;
+}
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    max-width: 350px;
+}
+
+.intro__img img {
+    box-shadow: var(--bs);
+}
+
+/* 600px and up */
+@media (min-width: 700px) {
+    .intro {
+        display: grid;
+        height: 75vh;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 2em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+        /* min-content = column will always be the size of the content stacked totally wrapped / or the size of the image
+        max-content for text = column will be the size of the text unwrapped */
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 350px;
+        /* HERE IS WHERE WE CONTROL OUR PICTURE COLUMN SIZE */
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -4.5em;
+        bottom: 2em;
+        width: calc(100% + 8em);
+        padding-right: 3.5em;
+
+    }
+
+
+
+}
+
+/* SERVICES*/
+
+.my-services {
+    text-align: center;
+}
+
+.section__title--services {
+    /* color: var(--clr-accent); */
+    position: relative;
+    /* we declared relative here to attach a pseduo element at the end of this element with ::after below */
+}
+
+/* I think maybe you can do a border bottom to create this affect */
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 0 auto;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.h3--service {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.h3--design {
+    margin-bottom: 1.2em;
+}
+
+
+.services {
+    margin-bottom: 3em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+    /* margin is to center */
+}
+
+.service__ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service__ul li {
+    margin-bottom: 0.3em;
+}
+
+.ion-monitor,
+.ion-settings {
+    font-size: 4em;
+}
+
+
+
+@media (min-width: 1000px) {
+    .services {
+        display: flex;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* If there is a sibling .service next to another .service there will create margins on the left */
+    .service+.service {
+        margin-left: 2em;
+    }
+
+    .logo img {
+        max-width: 100px;
+        margin-top: 1rem;
+        margin-left: 8rem;
+    }
+
+
+}
+
+/* Fixing background for smaller screens */
+@media (max-width: 600px) {
+
+    .my-services,
+    .my-work {
+        background-attachment: scroll;
+    }
+}
+
+/* About Me */
+
+.about-me {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+    margin-top: 2em;
+    /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12); */
+
+}
+
+@media (min-width: 780px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        /* position relative gives ability to move image left */
+        position: relative;
+        left: -1em;
+
+        width: calc(100% + 3em);
+
+        /* padding is so when window is smarter the text wont touch the img */
+        padding-left: 1em;
+        padding-right: calc(200px + 2em);
+    }
+
+    .about-me__img {
+        /* starting from the top and ending on the last row automatically (-1) */
+        /* grid-row: 1 / -1; */
+        grid-area: img;
+        /* position relative gives the ability to use z-index to put abovoe the subtitle */
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+/* PROJECT SECTION*/
+
+/*Underline */
+.section__title--my-work::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.4em auto 0.4em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.my-work {
+    text-align: center;
+    background-color: var(--clr-dark);
+    background-image: url(../img/project-5.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    /* background-position: 50% 80%; */
+}
+
+.my-work .section__title {
+    /* color: var(--clr-accent); */
+}
+
+.my-work {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__paragraph {
+    max-width: 40em;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.project {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--clr-accent);
+}
+
+.project__item {
+    margin: 1em;
+}
+
+.project__img {
+    transition: transform 200ms;
+}
+
+.project__img:hover {
+    transform: scale(1.1);
+}
+
+
+/* SOCIAL LINKS */
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+
+.social-list__item {
+    margin: 0 0.5em;
+}
+
+.social-list__link {
+    padding: 0.5em;
+    color: var(--clr-accent);
+}
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer__link {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    color: white;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: 0.7;
+}
+
+
+/*------------------------------------------
+        NAVIGATION 
+------------------------------------------*/
+
+header {
+    display: flex;
+    max-width: 85em;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+
+/*-------------------------------------------
+REGULAR NAV 
+--------------------------------------------*/
+
+.nav {
+    margin-top: 2.6em;
+    margin-right: 2em
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    font-size: 1.3em;
+    font-weight: 400;
+
+}
+
+.nav__item {
+    margin-right: 1.7em;
+    min-width: 135px;
+    text-align: center;
+}
+
+.item-hamburger {
+    display: none;
+}
+
+.nav__list a:link,
+.nav__list a:visited {
+    text-decoration: none;
+    color: var(--clr-light);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.3em;
+}
+
+.nav__list a:hover,
+.nav__list a:active {
+    transition: border-bottom 0.5s;
+    border-bottom: 2px solid var(--clr-accent);
+}
+
+.logo img {
+    max-width: 100px;
+    margin-top: 1rem;
+}
+
+
+.icon {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        position: relative;
+        margin: 0;
+    }
+
+    .nav__item {
+        margin-right: 0;
+    }
+
+    .nav__list li {
+        display: none;
+    }
+
+    .nav__list a:not(first-child) {
+        margin: 0 0 .8em 0;
+    }
+
+    .nav__list a.icon {
+        display: block;
+        font-size: 1.9em;
+        margin-right: 1.5em;
+    }
+
+    .nav__list .item-hamburger {
+        display: block;
+        /* need to declare absolute here so when we open the nav it does not make our header smaller due to opening column wise. */
+        position: absolute;
+        right: 0.7em;
+        top: 0;
+    }
+
+    .nav-open .nav__list li,
+    .nav-open .nav__list a {
+        display: block;
+    }
+
+    .nav-open {
+        padding: 0;
+    }
+
+    .nav-open .nav__list {
+        display: flex;
+        padding: 0 0.7em 0.5em 0.7em;
+        align-items: center;
+        flex-direction: column-reverse;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        border: 0.3em outset var(--clr-accent);
+        z-index: 5;
+        margin-right: 1em;
+        background-color: white;
+    }
+
+    .nav-open a.icon {
+        margin: 0;
+    }
+
+    .nav-open a {
+        border: none;
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    .nav-open a:focus {
+        outline: none;
+    }
+
+    .nav-open .item-home {
+        order: 5
+    }
+
+    .nav-open .item-services {
+        order: 4
+    }
+
+    .nav-open .item-about {
+        order: 3
+    }
+
+    .nav-open .item-work {
+        order: 2
+    }
+
+    .nav-open .item-hamburger {
+        top: -0.3em;
+        right: 0.82em;
+        order: 6;
+        margin-right: 1.43em;
+        text-align: center;
+    }
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        max-width: 110px;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+}
+
+
+.intro-background {
+    padding: 0;
+    background-color: var(--clr-dark);
+    background-image: url(../img/project-1.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}

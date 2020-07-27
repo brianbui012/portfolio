@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Bui</title>
+    <link rel="stylesheet" type="css/text"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+
+<body>
+    <section class="intro-background">
+        <header>
+            <div class="logo animate__animated animate__fadeInDown">
+                <img src="resources/img/logo2.png" alt="Logo">
+            </div>
+            <!-- <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button> -->
+            <nav class="nav animate__animated animate__fadeInDown">
+                <ul class="nav__list">
+                    <li class="nav__item item-home"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item item-services"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item item-work"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item item-about"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="item-hamburger"><a href="javascript:void(0);" class="icon nav-toggle"
+                            onclick="myFunction()">
+                            <i class="ion-navicon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro animate__animated animate__fadeIn" id="home">
+            <h1 class="section__title section__title--intro">
+                Hello, I'm <strong>Brian Bui</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Web Developer</p>
+            <figure class="intro__img">
+                <img src="resources/img/Brian.jpg" alt="">
+            </figure>
+        </section>
+
+    </section>
+
+
+    <!-- My Skill Sets -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">Services</h2>
+        <div class="services">
+
+            <div class="service">
+                <i class="ion-monitor"></i>
+                <h3 class="h3--design">Responsive Web Design</h3>
+                <p>Due to the myraid of devices that we use to consume tech, I strive to bring
+                    responsive web design and compatibility across all devices. My primary goal is to create intuative
+                    web applications that are user focused and responsive. </p>
+            </div>
+
+            <div class="service">
+                <i class="ion-settings"></i>
+                <h3 class="h3--service">Skills and Tools</h3>
+                <ul class="service__ul">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>NodeJS/Express</li>
+                    <li>React/Redux</li>
+                    <li>MongoDB/Mongoose</li>
+                    <li>JQuery</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <a href="#projects" class="btn">Projects</a>
+
+    </section>
+
+    <!-- My Work -->
+
+    <section class="my-work" id="projects">
+        <h2 class="section__title--my-work">Projects</h2>
+        <p class="section__subtitle"></p>
+
+        <div class="projects">
+            <p class="project__paragraph">An addicting and fun game app, primarily built with ReactJS/Redux, where you
+                choose the different colored
+                bubble from the set. See if you can get a high score!</p>
+            <div class="project">
+                <a href="http://brianbubblegame.herokuapp.com/" target="_blank" class="project__item">
+                    <img src="resources/img/Bubblepop.jpg" alt="" class="project__img">
+                </a>
+            </div>
+            <a href="http://brianbubblegame.herokuapp.com/" target="_blank" class="btn">Project 1</a>
+
+            <div class="project">
+                <a href="#" class="project__item">
+                    <img src="resources/img/project.jpg" alt="" class="project__img">
+                </a>
+            </div>
+            <a href="#project" class="btn ">Project 2</a>
+        </div>
+
+
+    </section>
+
+    <!-- About Me -->
+
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">About Me</h2>
+        <p class="section__subtitle section__subtitle--about">Designer & developer based out of SJC</p>
+
+        <div class="about-me__body">
+            <p> I am a self-taught developer. Graduated University of Santa Cruz with a Molecular, Cell, Developmental
+                Biology Degree, and worked in the Pharmaceutical industry for a few years. I started learning
+                programming on the side and found my growing passion for it, eventually deciding to pursue it full-time.
+            </p>
+            <p>There is nothing more satisfying than imagining an application and building it from the ground up.</p>
+        </div>
+
+        <img src="resources/img/Brian.jpg" alt="" class="about-me__img">
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <a href="mailto:brianbui012@gmail.com" class="footer__link"><i class="ion-email"> </i>brianbui012@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a href="#" class="social-list__link"><i class="ion-social-github"></i></a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://www.linkedin.com/in/brian-bui-931477125/" class="social-list__link"><i
+                        class="ion-social-linkedin-outline"></i></a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://www.facebook.com/brian.bui.315/" target="_blank" class="social-list__link"><i
+                        class="ion-social-facebook"></i></a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://www.instagram.com/bribui/?hl=en" class="social-list__link"><i
+                        class="ion-social-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="resources/js/index.js"></script>
+</body>
+
+</html>
