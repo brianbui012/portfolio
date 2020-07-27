@@ -395,7 +395,7 @@ h2 {
     background-image: url(../img/project-5.jpg);
     background-size: cover;
     background-blend-mode: multiply;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
 }
 
@@ -658,6 +658,6 @@ REGULAR NAV
     background-image: url(../img/project-1.jpg);
     background-size: cover;
     background-blend-mode: multiply;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 
 }
