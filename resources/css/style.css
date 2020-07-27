@@ -303,19 +303,7 @@ h2 {
 
 }
 
-/* Fixing background for smaller screens */
-@media (max-width: 650px) {
 
-    .my-services,
-    .my-work,
-    .intro-background {
-        background-attachment: scroll;
-    }
-
-    section {
-        padding: 4em 1em;
-    }
-}
 
 /* About Me */
 
@@ -661,4 +649,18 @@ REGULAR NAV
     background-blend-mode: multiply;
     background-attachment: fixed;
 
+}
+
+/* Fixing background for smaller screens */
+@media (max-width: 650px) {
+
+    .my-services,
+    .my-work,
+    .intro-background {
+        background-attachment: scroll;
+    }
+
+    section {
+        padding: 4em 1em;
+    }
 }
