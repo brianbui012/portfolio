@@ -10,9 +10,7 @@ html {
 }
 
 :root {
-    --ff-primary: 'Roboto', sans-serif;
-    --ff-secondary: 'Roboto', monospace;
-    --ff-third: 'Rubik', sans-serif;
+    --ff-primary: 'Rubik', sans-serif;
 
     --fw-reg: 300;
     --fw-bold: 500;
@@ -35,7 +33,13 @@ html {
         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.12);
+
 }
+
+.delay-1 {
+    animation-delay: 0.3s
+}
+
 
 @media (min-width: 800px) {
     :root {
@@ -50,7 +54,7 @@ body {
     background-color: #344152;
     /* background: linear-gradient(var(--clr-light), #242424 35%, var(--clr-light) 35%); */
     margin: 0;
-    font-family: "Rubik";
+    font-family: var(--ff-primary);
     color: var(--clr-light);
     font-size: var(--fs-body);
     font-weight: 300;
