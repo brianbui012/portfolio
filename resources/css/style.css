@@ -397,8 +397,6 @@ h2 {
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-position: center;
-    width: 100vw;
-    height: 100vh;
 }
 
 
@@ -661,7 +659,5 @@ REGULAR NAV
     background-size: cover;
     background-blend-mode: multiply;
     background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
 
 }
