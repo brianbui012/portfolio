@@ -19,8 +19,6 @@ html {
     --clr-light: #eeeeee;
     --clr-dark: #303030;
     --clr-accent: #778899;
-    /* #618bad; 
-    this ones good : #344152;*/
     --clr-background: #42647F;
 
     --fs-h1: 4rem;
@@ -37,7 +35,7 @@ html {
 }
 
 .delay-1 {
-    animation-delay: 0.3s
+    animation-delay: 0.35s
 }
 
 
@@ -182,6 +180,7 @@ h2 {
 
 /* 600px and up */
 @media (min-width: 700px) {
+
     .intro {
         display: grid;
         height: 75vh;
