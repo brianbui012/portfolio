@@ -17,22 +17,18 @@
 <body>
     <section class="intro-background">
         <header>
-            <div class="logo animate__animated animate__fadeInDown delay-1">
+            <div class="logo">
                 <img src="resources/img/logo2.png" alt="Logo">
             </div>
-            <!-- <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button> -->
-            <nav class="nav animate__animated animate__fadeInDown delay-1">
+            <nav class="nav">
                 <ul class="nav__list">
-                    <!-- <li class="nav__item item-home"><a href="#home" class="nav__link">Home</a></li> -->
-                    <li class="nav__item item-services"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item item-work"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item item-about"><a href="#about" class="nav__link">About Me</a></li>
-                    <li class="item-hamburger"><a href="javascript:void(0);" class="icon nav-toggle">
-                            <i class="ion-navicon"></i>
-                        </a>
-                    </li>
+                    <label for="toggle">&#9776;</label>
+                    <input id="toggle" type="checkbox">
+                    <div class="menu">
+                        <a href="#services" class="nav__link">Services</a>
+                        <a href="#projects" class="nav__link">Projects</a>
+                        <a href="#about" class="nav__link">About Me</a>
+                    </div>
                 </ul>
             </nav>
         </header>
