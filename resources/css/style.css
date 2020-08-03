@@ -575,7 +575,6 @@ label {
         width: 100%;
         display: none;
         background: var(--clr-background);
-        z-index: 100;
         border-radius: 1em;
     }
 
