@@ -401,9 +401,9 @@ h2 {
 }
 
 .project {
-    max-width: 550px;
+    max-width: 750px;
     margin: 0 auto;
-    color: var(--clr-accent);
+
 }
 
 .project__item {
@@ -411,6 +411,8 @@ h2 {
 }
 
 .project__img {
+    max-width: 600px;
+    margin: auto;
     transition: transform 200ms;
 }
 
